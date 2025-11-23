@@ -1,21 +1,17 @@
 import React from 'react';
-import { cn } from '@/lib/utils';
-import { ThemeProvider } from "@/components/theme-provider";
 
-interface RootLayoutProps {
-  children: React.ReactNode;
-}
-
-const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
+export default function App() {
   return (
-    <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-      <div className="min-h-screen bg-background font-sans antialiased">
-        <div className="container mx-auto p-4">
-          {children}
-        </div>
-      </div>
-    </ThemeProvider>
+    <div className="min-h-screen bg-background text-foreground">
+      <main className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold py-16 text-center">
+          The user wants to create a modern landing page that prominently features pricing information. The landing page should be visually appealing and encourage conversions.
+        </h1>
+        <p className="text-center text-muted-foreground mb-8">
+          Your AI-generated landing page is ready! Components will be imported below.
+        </p>
+        {/* Generated sections will be imported and rendered here */}
+      </main>
+    </div>
   );
-};
-
-export default RootLayout;
+}
